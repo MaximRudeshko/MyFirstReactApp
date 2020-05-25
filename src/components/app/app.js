@@ -8,7 +8,14 @@ import FormAdd from '../post-add-form/index';
 import './app.css'
 
 
-const App = () => {
+const App = (props) => {
+
+    const data = [
+        {label: "Goint to learn React", important : true, id : 'qwe'},
+        {label: "It is so good", important : false, id : 'qwr'},
+        {label: "I need a break...", important : false, id : 'qqq'}
+    ]
+
     return (
         <div className="app">
             <AppHeader/>
@@ -16,7 +23,7 @@ const App = () => {
                 <SearchPanel/>
                 <PostStatusFilter/>
             </div>
-            <PostList/>
+            <PostList posts = {data}/>
             <FormAdd/>
         </div>    
     )

@@ -6,7 +6,7 @@ const FormAdd = () => {
     return (
         <div className="d-flex bottom-panel">
             <input 
-                className="col-md-10" 
+                className="form-control new-post-label" 
                 type="text"
                 placeholder = 'О чем вы сейчас думаете?'
             />
