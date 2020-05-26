@@ -2,7 +2,7 @@ import React from 'react';
 
 import './post-add-form.css'
 
-const FormAdd = () => {
+const FormAdd = ({onAdd}) => {
     return (
         <div className="d-flex bottom-panel">
             <input 
@@ -12,7 +12,8 @@ const FormAdd = () => {
             />
             <button 
                 className = "btn btn-outline-secondary" 
-                type="submit">
+                type="submit"             
+                onClick = {() => onAdd('hello')}>
                 Добавить
             </button>
         </div>

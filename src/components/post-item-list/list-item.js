@@ -27,7 +27,7 @@ export default class ListItem extends Component{
 
     render(){
 
-        const {label} = this.props,
+        const {label, onDelete} = this.props,
               {important, like} = this.state;
 
         let classNames = "app-list-item d-flex justify-content-between";
@@ -50,7 +50,8 @@ export default class ListItem extends Component{
                         className = "btn-star btn-sm">
                         <i className = "fa fa-star"></i>
                     </button>
-                    <button className="btn-trash btn-sm">
+                    <button onClick = {onDelete}
+                         className="btn-trash btn-sm">
                         <i className = "fa fa-trash"></i>
                     </button>
                     <i className = "fa fa-heart"></i>
