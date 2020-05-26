@@ -4,7 +4,7 @@ import ListItem from '../post-item-list/list-item'
 import { ListGroup } from 'reactstrap';
 import './post-list.css'
 
-const PostList = ({posts, onDelete}) => {
+const PostList = ({posts, onDelete, onToggleImportant, onToggleLike}) => {
 
     // eslint-disable-next-line array-callback-return
     const elements = posts.map((item) => {
@@ -14,7 +14,9 @@ const PostList = ({posts, onDelete}) => {
                 <li key = {id} className = 'list-group-item'>
                     <ListItem 
                      {...itemProps}
-                     onDelete = {() => onDelete(id)} />
+                     onDelete = {() => onDelete(id)}
+                     onToggleLike = {() => onToggleLike(id)}
+                     onToggleImportant = {() => onToggleImportant(id)} />
                 </li>
             )
         }
